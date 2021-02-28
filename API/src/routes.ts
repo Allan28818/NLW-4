@@ -11,7 +11,6 @@ const userController = new UserController();
 const surveysController = new SurveysController();
 
 const sendMailController = new SendMailController();
-
 const answerController = new AnswerController();
 
 const npsController = new NpsController();

@@ -4,7 +4,7 @@ import { getCustomRepository } from "typeorm";
 import { AppError } from "../errors/AppError";
 import { SurveysRepository } from "../repositories/SurveysRepository";
 import { SurveysUsersRepository } from "../repositories/SurveysUsersRepository";
-import { UsersRepostory } from "../repositories/UsersRepository";
+import { UsersRepository } from "../repositories/UsersRepository";
 import SendMailService from "../services/SendMailService";
 
 class SendMailController {
@@ -12,7 +12,7 @@ class SendMailController {
   async execute(request: Request, response: Response) {
     const { email, survey_id } = request.body;
 
-    const usersRepository = getCustomRepository(UsersRepostory);
+    const usersRepository = getCustomRepository(UsersRepository);
     const surveysRepository = getCustomRepository(SurveysRepository);
     const surveysUsersRepository = getCustomRepository(SurveysUsersRepository);
 
